@@ -44,11 +44,10 @@ class RootWorkspace(
     )
 
     /**
-     * Lists the workspaces of all previous tasks.
+     * Lists the workspaces of all tasks, including the [currentTask].
      */
-    fun listPreviousTasks(): List<TaskWorkspace> = directory
+    fun listAllTasks(): List<TaskWorkspace> = directory
         .toFile()
         .directories()
         .map { TaskWorkspace(it.toPath()) }
-        .filter { it != currentTask }
 }
