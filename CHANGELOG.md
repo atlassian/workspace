@@ -7,9 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 [Unreleased]: https://bitbucket.org/atlassian/workspace/branches/compare/release-0.0.1%0Dmaster
 
-### Changed
-- Replace `RootWorkspace.listPreviousTasks` with `RootWorkspace.listAllTasks`.
-
 ### Fixed
 - Add missing [CHANGELOG.md](CHANGELOG.md).
 
