@@ -1,4 +1,4 @@
-package com.atlassian.performance.tools.workspace
+package com.atlassian.performance.tools.workspace.api
 
 import java.nio.file.Path
 

@@ -1,17 +1,6 @@
 # Multi-task workspaces
 Manage multi-task workspaces, where the tasks need to be isolated, but accessible across tasks.
 
-## API
-The API consists of all public Java types from `com.atlassian.performance.tools.workspace` and its subpackages:
-
-  * [source compatibility]
-  * [binary compatibility]
-  * [behavioral compatibility] with behavioral contracts expressed via Javadoc
-
-[source compatibility]: http://cr.openjdk.java.net/~darcy/OpenJdkDevGuide/OpenJdkDevelopersGuide.v0.777.html#source_compatibility
-[binary compatibility]: http://cr.openjdk.java.net/~darcy/OpenJdkDevGuide/OpenJdkDevelopersGuide.v0.777.html#binary_compatibility
-[behavioral compatibility]: http://cr.openjdk.java.net/~darcy/OpenJdkDevGuide/OpenJdkDevelopersGuide.v0.777.html#behavioral_compatibility
-
 ## Releasing
 Versioning, releasing and distribution are managed by the [gradle-release] plugin.
 See the [changelog](CHANGELOG.md).

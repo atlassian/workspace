@@ -1,5 +1,6 @@
 package com.atlassian.performance.tools.workspace.git
 
+import com.atlassian.performance.tools.workspace.api.git.GitRepo
 import org.eclipse.jgit.lib.Repository
 
 /**

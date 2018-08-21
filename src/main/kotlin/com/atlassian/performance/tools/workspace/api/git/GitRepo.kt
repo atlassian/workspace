@@ -1,11 +1,18 @@
-package com.atlassian.performance.tools.workspace.git
+package com.atlassian.performance.tools.workspace.api.git
 
+import com.atlassian.performance.tools.workspace.git.LocalGitRepo
 import org.eclipse.jgit.internal.storage.file.FileRepository
 import org.eclipse.jgit.lib.Repository
 import java.io.File
 
+/**
+ * Provides versioning context.
+ */
 interface GitRepo {
 
+    /**
+     * @return Git HEAD description
+     */
     fun getHead(): String
 
     companion object Locator {

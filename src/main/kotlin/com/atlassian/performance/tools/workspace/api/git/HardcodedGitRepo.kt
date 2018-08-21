@@ -1,4 +1,4 @@
-package com.atlassian.performance.tools.workspace.git
+package com.atlassian.performance.tools.workspace.api.git
 
 class HardcodedGitRepo(
     private val head: String
