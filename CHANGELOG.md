@@ -18,6 +18,15 @@ The API consists of all public Java types from `com.atlassian.performance.tools.
 ## [Unreleased]
 [Unreleased]: https://bitbucket.org/atlassian/workspace/branches/compare/master%0Drelease-1.0.0
 
+## [1.1.0] - 2018-08-21
+[1.1.0]: https://bitbucket.org/atlassian/workspace/branches/compare/release-1.1.0%0Drelease-1.0.0
+
+### Added
+- Add `RootWorkspace.listTasks`.
+
+### Deprecated
+- Deprecate `RootWorkspace.listPreviousTasks`.
+
 ## [1.0.0] - 2018-08-21
 [1.0.0]: https://bitbucket.org/atlassian/workspace/branches/compare/release-1.0.0%0Drelease-0.0.1
 

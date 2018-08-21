@@ -44,11 +44,19 @@ class RootWorkspace(
     )
 
     /**
-     * Lists the workspaces of all previous tasks.
+     * Lists the workspaces of all tasks.
      */
-    fun listPreviousTasks(): List<TaskWorkspace> = directory
+    fun listTasks(): List<TaskWorkspace> = directory
         .toFile()
         .directories()
         .map { TaskWorkspace(it.toPath()) }
-        .filter { it != currentTask }
+
+    /**
+     * Lists the workspaces of all previous tasks.
+     */
+    @Deprecated(
+        message = "You probably don't need to filter out the [currentTask], and if you do, you can do it manually",
+        replaceWith = ReplaceWith("listTasks()")
+    )
+    fun listPreviousTasks(): List<TaskWorkspace> = listTasks().filter { it != currentTask }
 }
