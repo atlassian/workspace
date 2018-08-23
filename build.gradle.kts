@@ -13,6 +13,11 @@ dependencies {
     ).forEach { compile(it) }
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_9
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
 task<Wrapper>("wrapper") {
     gradleVersion = "4.9"
     distributionType = Wrapper.DistributionType.ALL
