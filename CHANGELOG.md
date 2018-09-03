@@ -15,8 +15,16 @@ The API consists of all public Java types from `com.atlassian.performance.tools.
 [binary compatibility]: http://cr.openjdk.java.net/~darcy/OpenJdkDevGuide/OpenJdkDevelopersGuide.v0.777.html#binary_compatibility
 [behavioral compatibility]: http://cr.openjdk.java.net/~darcy/OpenJdkDevGuide/OpenJdkDevelopersGuide.v0.777.html#behavioral_compatibility
 
+### POM
+Changing the license is breaking a contract.
+Adding a requirement of a major version of a dependency is breaking a contract.
+Dropping a requirement of a major version of a dependency is a new contract.
+
 ## [Unreleased]
-[Unreleased]: https://bitbucket.org/atlassian/workspace/branches/compare/master%0Drelease-1.0.0
+[Unreleased]: https://bitbucket.org/atlassian/workspace/branches/compare/master%0Drelease-2.0.0
+
+## [2.0.0] - 2018-09-03
+[2.0.0]: https://bitbucket.org/atlassian/workspace/branches/compare/release-2.0.0%0Drelease-1.1.0
 
 ### Changed
 - Depend on a stable version of APT `io`.
