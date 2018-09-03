@@ -1,6 +1,6 @@
 package com.atlassian.performance.tools.workspace.api
 
-import com.atlassian.performance.tools.io.ensureDirectory
+import com.atlassian.performance.tools.io.api.ensureDirectory
 import java.nio.file.Path
 
 /**

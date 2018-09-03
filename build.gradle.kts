@@ -8,9 +8,9 @@ plugins {
 dependencies {
     listOf(
         "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion",
-        "com.atlassian.performance.tools:io:0.0.1",
+        "com.atlassian.performance.tools:io:[1.0.0,2.0.0)",
         "org.eclipse.jgit:org.eclipse.jgit:4.11.0.201803080745-r"
-    ).forEach { compile(it) }
+    ).forEach { implementation(it) }
 }
 
 task<Wrapper>("wrapper") {

@@ -1,8 +1,8 @@
 package com.atlassian.performance.tools.workspace.api
 
-import com.atlassian.performance.tools.io.directories
-import com.atlassian.performance.tools.io.ensureDirectory
-import com.atlassian.performance.tools.io.resolveSafely
+import com.atlassian.performance.tools.io.api.directories
+import com.atlassian.performance.tools.io.api.ensureDirectory
+import com.atlassian.performance.tools.io.api.resolveSafely
 import java.nio.file.Path
 import java.nio.file.Paths
 import java.time.LocalDateTime
