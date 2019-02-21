@@ -2,7 +2,7 @@ val kotlinVersion = "1.2.30"
 
 plugins {
     kotlin("jvm").version("1.2.30")
-    id("com.atlassian.performance.tools.gradle-release").version("0.4.3")
+    id("com.atlassian.performance.tools.gradle-release").version("0.5.0")
 }
 
 configurations.all {
@@ -25,7 +25,7 @@ dependencies {
     ).forEach { implementation(it) }
 }
 
-task<Wrapper>("wrapper") {
-    gradleVersion = "4.9"
+tasks.getByName("wrapper", Wrapper::class).apply {
+    gradleVersion = "5.2.1"
     distributionType = Wrapper.DistributionType.ALL
 }
