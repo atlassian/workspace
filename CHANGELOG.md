@@ -21,16 +21,16 @@ Adding a requirement of a major version of a dependency is breaking a contract.
 Dropping a requirement of a major version of a dependency is a new contract.
 
 ## [Unreleased]
-[Unreleased]: https://bitbucket.org/atlassian/workspace/branches/compare/master%0Drelease-2.0.0
+[Unreleased]: https://github.com/atlassian/workspace/compare/release-2.0.0...master
 
 ## [2.0.0] - 2018-09-03
-[2.0.0]: https://bitbucket.org/atlassian/workspace/branches/compare/release-2.0.0%0Drelease-1.1.0
+[2.0.0]: https://github.com/atlassian/workspace/compare/release-1.1.0...release-2.0.0
 
 ### Changed
 - Depend on a stable version of APT `io`.
 
 ## [1.1.0] - 2018-08-21
-[1.1.0]: https://bitbucket.org/atlassian/workspace/branches/compare/release-1.1.0%0Drelease-1.0.0
+[1.1.0]: https://github.com/atlassian/workspace/compare/release-1.0.0...release-1.1.0
 
 ### Added
 - Add `RootWorkspace.listTasks`.
@@ -39,7 +39,7 @@ Dropping a requirement of a major version of a dependency is a new contract.
 - Deprecate `RootWorkspace.listPreviousTasks`.
 
 ## [1.0.0] - 2018-08-21
-[1.0.0]: https://bitbucket.org/atlassian/workspace/branches/compare/release-1.0.0%0Drelease-0.0.1
+[1.0.0]: https://github.com/atlassian/workspace/compare/release-0.0.1...release-1.0.0
 
 ### Changed
 - Define the public API.
@@ -48,7 +48,7 @@ Dropping a requirement of a major version of a dependency is a new contract.
 - Add missing [CHANGELOG.md](CHANGELOG.md).
 
 ## [0.0.1] - 2018-08-06
-[0.0.1]: https://bitbucket.org/atlassian/workspace/branches/compare/release-0.0.1%0Dinitial-commit
+[0.0.1]: https://github.com/atlassian/workspace/compare/initial-commit...release-0.0.1
 
 ### Added
 - Migrate multi-task workspace management from [JPT submodule].
