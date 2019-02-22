@@ -9,6 +9,7 @@ jobs:
   include:
     - stage: test
       script: ./gradlew build
+      after_script: ./scripts/upload-artifacts.sh
     - stage: release
       script: ./scripts/travis-release.sh
 
