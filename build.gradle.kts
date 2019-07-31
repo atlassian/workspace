@@ -1,7 +1,7 @@
-val kotlinVersion = "1.2.30"
+val kotlinVersion = "1.3.20"
 
 plugins {
-    kotlin("jvm").version("1.2.30")
+    kotlin("jvm").version("1.3.20")
     id("com.atlassian.performance.tools.gradle-release").version("0.5.0")
 }
 
@@ -19,7 +19,7 @@ configurations.all {
 
 dependencies {
     listOf(
-        "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion",
+        "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
         "com.atlassian.performance.tools:io:[1.0.0,2.0.0)",
         "org.eclipse.jgit:org.eclipse.jgit:4.11.0.201803080745-r"
     ).forEach { implementation(it) }

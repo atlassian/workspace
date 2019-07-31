@@ -23,6 +23,11 @@ Dropping a requirement of a major version of a dependency is a new contract.
 ## [Unreleased]
 [Unreleased]: https://github.com/atlassian/workspace/compare/release-2.0.0...master
 
+### Fixed
+- Use non-deprecated Kotlin stdlib. Fix [JPERF-466].
+
+[JPERF-466]: https://ecosystem.atlassian.net/browse/JPERF-466
+
 ## [2.0.0] - 2018-09-03
 [2.0.0]: https://github.com/atlassian/workspace/compare/release-1.1.0...release-2.0.0
 
