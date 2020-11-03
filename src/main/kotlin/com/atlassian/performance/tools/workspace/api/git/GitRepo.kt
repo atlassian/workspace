@@ -31,11 +31,10 @@ interface GitRepo {
             if (descendant.isDirectory) {
                 descendant
                     .listFiles()
-                    .singleOrNull { it.name == ".git" }
+                    ?.singleOrNull { it.name == ".git" }
                     ?.let { return FileRepository(toGitFolder(it)) }
             }
-            val parent = descendant.parentFile
-            return when (parent) {
+            return when (val parent = descendant.parentFile) {
                 null -> null
                 else -> findInAncestors(parent)
             }
@@ -49,7 +48,7 @@ interface GitRepo {
 
             val line = file.bufferedReader().use { it.readLine() }
             val pattern = "gitdir: (.*)".toRegex()
-            val match = pattern.find(line);
+            val match = pattern.find(line)
             val path = match!!.groupValues[1]
             val gitFolderPath = path.substring(0, path.indexOf(".git") + 4)
 
