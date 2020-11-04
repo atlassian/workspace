@@ -50,7 +50,7 @@ interface GitRepo {
             val pattern = "gitdir: (.*)".toRegex()
             val match = pattern.find(line)
             val path = match!!.groupValues[1]
-            val gitFolderPath = path.substring(0, path.indexOf(".git") + 4)
+            val gitFolderPath = path.replaceAfter(".git", "")
 
             return File(gitFolderPath)
         }
