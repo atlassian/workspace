@@ -23,6 +23,9 @@ Dropping a requirement of a major version of a dependency is a new contract.
 ## [Unreleased]
 [Unreleased]: https://github.com/atlassian/workspace/compare/release-2.0.1...master
 
+### Fixed
+- Support working in a Git Worktree folder. Fix [JPERF-667].
+
 ## [2.0.1] - 2019-07-31
 [2.0.1]: https://github.com/atlassian/workspace/compare/release-2.0.0...release-2.0.1
 

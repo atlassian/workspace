@@ -16,7 +16,9 @@ interface GitRepo {
     fun getHead(): String
 
     companion object Locator {
-        fun findFromCurrentDirectory(): GitRepo = findInAncestors(File(".").absoluteFile)
+        fun findFromCurrentDirectory(): GitRepo = findFromDirectory(".")
+
+        fun findFromDirectory(pathName: String): GitRepo = findInAncestors(File(pathName).absoluteFile)
             ?.let { LocalGitRepo(it) }
             ?: HardcodedGitRepo(head = "not found")
 
@@ -29,14 +31,28 @@ interface GitRepo {
             if (descendant.isDirectory) {
                 descendant
                     .listFiles()
-                    .singleOrNull { it.name == ".git" }
-                    ?.let { return FileRepository(it) }
+                    ?.singleOrNull { it.name == ".git" }
+                    ?.let { return FileRepository(toGitFolder(it)) }
             }
-            val parent = descendant.parentFile
-            return when (parent) {
+            return when (val parent = descendant.parentFile) {
                 null -> null
                 else -> findInAncestors(parent)
             }
+        }
+
+        private fun toGitFolder(file: File): File? {
+
+            if (file.isDirectory) {
+                return file
+            }
+
+            val line = file.bufferedReader().use { it.readLine() }
+            val pattern = "gitdir: (.*)".toRegex()
+            val match = pattern.find(line)
+            val path = match!!.groupValues[1]
+            val gitFolderPath = path.replaceAfter(".git", "")
+
+            return File(gitFolderPath)
         }
     }
 }

@@ -1,3 +1,6 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 val kotlinVersion = "1.3.20"
 
 plugins {
@@ -23,6 +26,21 @@ dependencies {
         "com.atlassian.performance.tools:io:[1.0.0,2.0.0)",
         "org.eclipse.jgit:org.eclipse.jgit:4.11.0.201803080745-r"
     ).forEach { implementation(it) }
+
+    listOf(
+        "junit:junit:4.12",
+        "org.hamcrest:hamcrest-library:1.3",
+        "org.assertj:assertj-core:3.10.0"
+    ).forEach { testCompile(it) }
+}
+
+tasks.getByName("test", Test::class).apply {
+    maxHeapSize = "2g" // Work around https://ecosystem.atlassian.net/browse/JPERF-395
+
+    testLogging {
+        events = setOf(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED)
+        exceptionFormat = TestExceptionFormat.FULL
+    }
 }
 
 tasks.getByName("wrapper", Wrapper::class).apply {
