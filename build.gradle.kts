@@ -5,7 +5,7 @@ val kotlinVersion = "1.3.20"
 
 plugins {
     kotlin("jvm").version("1.3.20")
-    id("com.atlassian.performance.tools.gradle-release").version("0.5.0")
+    id("com.atlassian.performance.tools.gradle-release").version("0.7.1")
 }
 
 configurations.all {
