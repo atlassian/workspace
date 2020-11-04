@@ -21,10 +21,15 @@ Adding a requirement of a major version of a dependency is breaking a contract.
 Dropping a requirement of a major version of a dependency is a new contract.
 
 ## [Unreleased]
-[Unreleased]: https://github.com/atlassian/workspace/compare/release-2.0.1...master
+[Unreleased]: https://github.com/atlassian/workspace/compare/release-2.0.2...master
+
+## [2.0.2] - 2019-11-04
+[2.0.2]: https://github.com/atlassian/workspace/compare/release-2.0.1...release-2.0.2
 
 ### Fixed
 - Support working in a Git Worktree folder. Fix [JPERF-667].
+
+[JPERF-667]: https://ecosystem.atlassian.net/browse/JPERF-667
 
 ## [2.0.1] - 2019-07-31
 [2.0.1]: https://github.com/atlassian/workspace/compare/release-2.0.0...release-2.0.1
