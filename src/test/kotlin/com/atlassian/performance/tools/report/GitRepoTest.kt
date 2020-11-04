@@ -60,7 +60,7 @@ class GitRepoTest {
 
         val head = repo.getHead()
 
-        assertThat(head, equalTo("bc8578c511a558dbf542adc23fa1a33b24695c1f"))
+        assertThat(head, equalTo("14f2d8ec89d8dd885f7b561dc6ec823e402d551e"))
         println("Got Git commit HEAD: $head")
     }
 
