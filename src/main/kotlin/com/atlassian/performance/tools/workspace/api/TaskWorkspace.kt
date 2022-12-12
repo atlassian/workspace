@@ -18,4 +18,5 @@ data class TaskWorkspace(
     fun isolateReport(
         reportFile: String
     ): Path = directory.resolve(reportFile)
+
 }
