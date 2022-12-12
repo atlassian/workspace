@@ -29,8 +29,7 @@ dependencies {
 
     listOf(
         "junit:junit:4.12",
-        "org.hamcrest:hamcrest-library:1.3",
-        "org.assertj:assertj-core:3.10.0"
+        "org.assertj:assertj-core:3.23.1"
     ).forEach { testCompile(it) }
 }
 
