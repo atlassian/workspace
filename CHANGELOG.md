@@ -23,6 +23,9 @@ Dropping a requirement of a major version of a dependency is a new contract.
 ## [Unreleased]
 [Unreleased]: https://github.com/atlassian/workspace/compare/release-2.0.2...master
 
+### Fixed
+- Stop creating directories just by creating instance of `RootWorkspace`, make it lazy.
+
 ## [2.0.2] - 2019-11-04
 [2.0.2]: https://github.com/atlassian/workspace/compare/release-2.0.1...release-2.0.2
 

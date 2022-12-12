@@ -19,20 +19,24 @@ class RootWorkspace(
      * The directory containing the root workspace.
      * Embedded within [parent].
      */
-    val directory: Path = parent
-        .resolve("jpt-workspace")
-        .toAbsolutePath()
-        .normalize()
-        .ensureDirectory()
+    val directory: Path by lazy {
+        parent
+            .resolve("jpt-workspace")
+            .toAbsolutePath()
+            .normalize()
+            .ensureDirectory()
+    }
 
     /**
      * The current task workspace unique to this root workspace instance.
      */
-    val currentTask: TaskWorkspace = isolateTask(
-        label = System.getenv("bamboo_buildResultKey")
-            ?: LocalDateTime.now()
-                .format(ISO_LOCAL_DATE_TIME)
-    )
+    val currentTask: TaskWorkspace by lazy {
+        isolateTask(
+            label = System.getenv("bamboo_buildResultKey")
+                ?: LocalDateTime.now()
+                    .format(ISO_LOCAL_DATE_TIME)
+        )
+    }
 
     /**
      * Finds a new workspaces for a task.
