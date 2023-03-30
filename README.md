@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/atlassian/workspace.svg?branch=master)](https://travis-ci.com/atlassian/workspace)
-
 # Multi-task workspaces
 Manage multi-task workspaces, where the tasks need to be isolated, but accessible across tasks.
 
