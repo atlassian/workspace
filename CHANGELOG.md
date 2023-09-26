@@ -21,7 +21,10 @@ Adding a requirement of a major version of a dependency is breaking a contract.
 Dropping a requirement of a major version of a dependency is a new contract.
 
 ## [Unreleased]
-[Unreleased]: https://github.com/atlassian/workspace/compare/release-2.0.2...master
+[Unreleased]: https://github.com/atlassian/workspace/compare/release-2.0.3...master
+
+## [2.0.3] - 2023-09-26
+[2.0.3]: https://github.com/atlassian/workspace/compare/release-2.0.2...release-2.0.3
 
 ### Fixed
 - Stop creating directories just by creating instance of `RootWorkspace`.
